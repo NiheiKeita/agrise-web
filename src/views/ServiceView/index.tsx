@@ -3,7 +3,7 @@
 export default function ServiceView() {
   return (
     <section className="space-y-8">
-      <h1 className="font-playfair text-3xl font-bold text-gray-900">SERVICE</h1>
+      <h1 className="font-playfair text-3xl font-bold text-gray-900 text-center">SERVICE</h1>
 
       <div className="space-y-8">
         <div className="rounded-lg border border-gray-200 p-6 shadow-sm">
