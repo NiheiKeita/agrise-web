@@ -17,7 +17,7 @@ export function SharedHeader({ scrollY = 0, scrollDirection = 'up' }: SharedHead
     // Close mobile menu on route change
     setMobileOpen(false)
   }, [pathname])
-  
+
   // ヘッダーを隠すかどうかの判定
   const shouldHideHeader = !mobileOpen && scrollDirection === 'down' && scrollY > 100
 
@@ -25,7 +25,7 @@ export function SharedHeader({ scrollY = 0, scrollDirection = 'up' }: SharedHead
     <header
       className={`fixed inset-x-0 top-0 z-50 p-2 transition-all duration-300 sm:px-4 lg:px-6 ${scrollY > 50
         ? 'border-b border-gray-200 bg-white/90 shadow-sm backdrop-blur-md'
-        : 'bg-transparent'
+        : 'bg-white/90'
         }`}
       style={{
         transform: shouldHideHeader ? 'translateY(-100%)' : 'translateY(0%)',
