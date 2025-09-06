@@ -12,6 +12,7 @@ interface SharedHeaderProps {
 export function SharedHeader({ scrollY = 0, scrollDirection = 'up' }: SharedHeaderProps) {
   const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
+  const isActive = (href: string) => pathname === href || pathname === `${href}/`
 
   useEffect(() => {
     // Close mobile menu on route change
@@ -47,25 +48,25 @@ export function SharedHeader({ scrollY = 0, scrollDirection = 'up' }: SharedHead
           <div className="hidden items-center space-x-6 md:flex">
             <Link
               href={"/"}
-              className={`font-inter text-sm font-medium transition-colors duration-200 ${pathname === '/' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+              className={`font-inter text-sm font-medium transition-colors duration-200 border-b-2 ${isActive('/') ? 'text-gray-900 border-gray-900' : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'}`}
             >
               TOP
             </Link>
             <Link
               href={"/about"}
-              className={`font-inter text-sm font-medium transition-colors duration-200 ${pathname === '/about' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+              className={`font-inter text-sm font-medium transition-colors duration-200 border-b-2 ${isActive('/about') ? 'text-gray-900 border-gray-900' : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'}`}
             >
               ABOUT
             </Link>
             <Link
               href={"/service"}
-              className={`font-inter text-sm font-medium transition-colors duration-200 ${pathname === '/service' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+              className={`font-inter text-sm font-medium transition-colors duration-200 border-b-2 ${isActive('/service') ? 'text-gray-900 border-gray-900' : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'}`}
             >
               SERVICE
             </Link>
             <Link
               href={"/contact"}
-              className={`font-inter text-sm font-medium transition-colors duration-200 ${pathname === '/contact' ? 'text-gray-900' : 'text-gray-600 hover:text-gray-900'}`}
+              className={`font-inter text-sm font-medium transition-colors duration-200 border-b-2 ${isActive('/contact') ? 'text-gray-900 border-gray-900' : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'}`}
             >
               CONTACT
             </Link>
@@ -99,25 +100,25 @@ export function SharedHeader({ scrollY = 0, scrollDirection = 'up' }: SharedHead
             <div className="space-y-1 rounded-lg border border-gray-200 bg-white p-2 shadow-sm">
               <Link
                 href={"/"}
-                className={`block rounded-md px-3 py-2 font-inter text-sm ${pathname === '/' ? 'bg-gray-50 text-gray-900' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
+                className={`block rounded-md px-3 py-2 font-inter text-sm ${isActive('/') ? 'bg-gray-50 text-gray-900' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
               >
                 TOP
               </Link>
               <Link
                 href={"/about"}
-                className={`block rounded-md px-3 py-2 font-inter text-sm ${pathname === '/about' ? 'bg-gray-50 text-gray-900' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
+                className={`block rounded-md px-3 py-2 font-inter text-sm ${isActive('/about') ? 'bg-gray-50 text-gray-900' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
               >
                 ABOUT
               </Link>
               <Link
                 href={"/service"}
-                className={`block rounded-md px-3 py-2 font-inter text-sm ${pathname === '/service' ? 'bg-gray-50 text-gray-900' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
+                className={`block rounded-md px-3 py-2 font-inter text-sm ${isActive('/service') ? 'bg-gray-50 text-gray-900' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
               >
                 SERVICE
               </Link>
               <Link
                 href={"/contact"}
-                className={`block rounded-md px-3 py-2 font-inter text-sm ${pathname === '/contact' ? 'bg-gray-50 text-gray-900' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
+                className={`block rounded-md px-3 py-2 font-inter text-sm ${isActive('/contact') ? 'bg-gray-50 text-gray-900' : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'}`}
               >
                 CONTACT
               </Link>
