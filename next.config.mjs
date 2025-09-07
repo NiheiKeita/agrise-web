@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/chisato-hara' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/chisato-hara/' : '',
+  basePath: process.env.NODE_ENV === 'production' ? '/agrise-web' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/agrise-web/' : '',
   images: {
     unoptimized: true
   }
