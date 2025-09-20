@@ -24,11 +24,26 @@ https://marketplace.visualstudio.com/items?itemName=openai.chatgpt
 
 1. ブランチを作成
 GitHub Desktopの`Current Branch`から新しく作成
+
 2. AIにコードを書かせる
 VSCodeのAIの拡張機能からコードを書く
-3. GitHubにプッシュ
-4. PRの作成
 
+3. GitHubにコミット・プッシュ
+GitHub Desktopの左下の方にコメント(どんなことをしたか)を書いて、コミット(コメント入力下にある青いボタンを押す)をする
+それが終わったら、`Current Branch`の右隣に`Publish Branch`と表示されているのでそれを押す
+
+4. PRの作成
+ブラウザで`https://github.com/NiheiKeita/agrise-web`にアクセスすると`New Pull Request`が出てるので、それを押して作成する
+
+# コマンド
+VSCodeのターミナルを使用して行うコマンド
+### 初回
+`npm ci`を行う
+※初回のみでOK
+
+### 起動するコマンド
+`npm run dev`を行うと、ブラウザで確認できる
+`http://localhost:3000`にブラウザでアクセスすることで確認できる
 
 
 # リリース方法
