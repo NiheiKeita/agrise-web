@@ -4,11 +4,11 @@ import Link from "next/link"
 
 export default function TopView() {
   return (
-    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white via-gray-50 to-gray-100 px-6 py-20 sm:px-8 md:py-32">
+    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-200 via-pink-200 to-sky-200 px-6 py-20 sm:px-8 md:py-32">
       {/* Decorative background */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 -right-20 h-64 w-64 rounded-full bg-indigo-100 opacity-40 blur-3xl" />
-        <div className="absolute -bottom-24 -left-10 h-72 w-72 rounded-full bg-amber-100 opacity-40 blur-3xl" />
+        <div className="absolute -top-24 -right-20 h-64 w-64 rounded-full bg-orange-200 opacity-40 blur-3xl" />
+        <div className="absolute -bottom-24 -left-10 h-72 w-72 rounded-full bg-sky-200 opacity-40 blur-3xl" />
       </div>
 
       <div className="mx-auto max-w-3xl text-center">
