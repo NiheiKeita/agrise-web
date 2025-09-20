@@ -4,7 +4,7 @@ name: Deploy to GitHub Pages
 on: 
     push:
       tags:
-        - 'stg.v.*'
+        - 'ghp.v.*'
 
 permissions:
   contents: read
