@@ -26,6 +26,9 @@ const cormorantGaramond = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "株式会社AGRISE | AGRISE Co., Ltd.",
   description: "キャリア育成と不動産を軸に、関わるすべての人が自分らしい人生を歩める社会を目指す株式会社AGRISEのコーポレートサイト",
+  verification: {
+    google: "Fq6arPWMgqt3Ymc0j24MA9Nnt-2WDFyCbBMQsJRSRTg",
+  },
 }
 
 export default function RootLayout({
