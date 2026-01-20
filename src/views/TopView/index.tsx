@@ -7,8 +7,8 @@ export default function TopView() {
     <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-200 via-pink-200 to-sky-200 px-4 py-16 sm:px-6 sm:py-20 md:py-32">
       {/* Decorative background */}
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-24 -right-20 h-64 w-64 rounded-full bg-orange-200 opacity-40 blur-3xl" />
-        <div className="absolute -bottom-24 -left-10 h-72 w-72 rounded-full bg-sky-200 opacity-40 blur-3xl" />
+        <div className="absolute -right-20 -top-24 size-64 rounded-full bg-orange-200 opacity-40 blur-3xl" />
+        <div className="absolute -bottom-24 -left-10 size-72 rounded-full bg-sky-200 opacity-40 blur-3xl" />
       </div>
 
       <div className="mx-auto max-w-3xl text-center">
