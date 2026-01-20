@@ -2,7 +2,7 @@ export default function ContactView() {
   return (
     <section className="space-y-4">
       <div className="space-y-8">
-        <h1 className="font-playfair text-3xl font-bold text-gray-900 text-center">CONTACT</h1>
+        <h1 className="text-center font-playfair text-3xl font-bold text-gray-900">CONTACT</h1>
         <p className="text-gray-700">お問合せは以下のメールアドレスまでご連絡ください。</p>
         <p>
           <a

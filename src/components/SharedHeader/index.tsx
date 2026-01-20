@@ -1,8 +1,10 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
+import logo from "~/app/logo.png"
 
 interface SharedHeaderProps {
   scrollY?: number
@@ -38,9 +40,19 @@ export function SharedHeader({ scrollY = 0, scrollDirection = 'up' }: SharedHead
             href={"/"}
             className="font-playfair text-xl font-bold text-gray-900 transition-colors duration-200 hover:text-gray-600"
           >
-            <div className="shrink-0">
-              <h1 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text font-playfair text-2xl font-bold text-transparent sm:text-3xl">株式会社AGRISE</h1>
-              <p className="font-inter text-[10px] tracking-[0.25em] text-gray-600 sm:text-xs">AGRiSE Co., Ltd.</p>
+            <div className="flex items-center gap-3">
+              <Image
+                src={logo}
+                alt="株式会社アグライズ ロゴ"
+                width={44}
+                height={44}
+                priority
+                className="size-10 object-cover sm:size-11"
+              />
+              <div className="shrink-0">
+                <h1 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text font-playfair text-2xl font-bold text-transparent sm:text-3xl">株式会社アグライズ</h1>
+                <p className="font-inter text-[10px] tracking-[0.25em] text-gray-600 sm:text-xs">コーポレートサイト</p>
+              </div>
             </div>
           </Link>
 
@@ -48,25 +60,25 @@ export function SharedHeader({ scrollY = 0, scrollDirection = 'up' }: SharedHead
           <div className="hidden items-center space-x-6 md:flex">
             <Link
               href={"/"}
-              className={`font-inter text-sm font-medium transition-colors duration-200 border-b-2 ${isActive('/') ? 'text-gray-900 border-gray-900' : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'}`}
+              className={`border-b-2 font-inter text-sm font-medium transition-colors duration-200 ${isActive('/') ? 'border-gray-900 text-gray-900' : 'border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-900'}`}
             >
               TOP
             </Link>
             <Link
               href={"/about"}
-              className={`font-inter text-sm font-medium transition-colors duration-200 border-b-2 ${isActive('/about') ? 'text-gray-900 border-gray-900' : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'}`}
+              className={`border-b-2 font-inter text-sm font-medium transition-colors duration-200 ${isActive('/about') ? 'border-gray-900 text-gray-900' : 'border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-900'}`}
             >
               ABOUT
             </Link>
             <Link
               href={"/service"}
-              className={`font-inter text-sm font-medium transition-colors duration-200 border-b-2 ${isActive('/service') ? 'text-gray-900 border-gray-900' : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'}`}
+              className={`border-b-2 font-inter text-sm font-medium transition-colors duration-200 ${isActive('/service') ? 'border-gray-900 text-gray-900' : 'border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-900'}`}
             >
               SERVICE
             </Link>
             <Link
               href={"/contact"}
-              className={`font-inter text-sm font-medium transition-colors duration-200 border-b-2 ${isActive('/contact') ? 'text-gray-900 border-gray-900' : 'border-transparent text-gray-600 hover:text-gray-900 hover:border-gray-300'}`}
+              className={`border-b-2 font-inter text-sm font-medium transition-colors duration-200 ${isActive('/contact') ? 'border-gray-900 text-gray-900' : 'border-transparent text-gray-600 hover:border-gray-300 hover:text-gray-900'}`}
             >
               CONTACT
             </Link>
@@ -81,11 +93,11 @@ export function SharedHeader({ scrollY = 0, scrollDirection = 'up' }: SharedHead
             className="inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:bg-gray-100 md:hidden"
           >
             {mobileOpen ? (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <svg xmlns="http://www.w3.org/2000/svg" className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <svg xmlns="http://www.w3.org/2000/svg" className="size-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
             )}

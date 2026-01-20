@@ -3,6 +3,7 @@
 import { ReactNode, useState, useEffect } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
+import { BrandLogo } from "~/components/BrandLogo"
 import { SharedHeader } from "~/components/SharedHeader"
 
 interface SharedLayoutProps {
@@ -51,33 +52,41 @@ export function SharedLayout({ children }: SharedLayoutProps) {
         {children}
       </main>
 
-      <footer className="mt-20 border-t border-gray-200 bg-gray-50">
-        <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
-            <div className="text-center sm:text-left">
-              <h3 className="font-playfair text-xl font-bold text-gray-900">株式会社AGRISE</h3>
-              <p className="mt-2 text-sm text-gray-600">なりたい自分に、もっと近く。</p>
+      <footer className="mt-20 bg-slate-950 text-white/80">
+        <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-3">
+            <div className="text-center md:text-left">
+              <div className="flex flex-col items-center gap-4 md:items-start">
+                <BrandLogo size="lg" />
+                <div>
+                  <h3 className="font-playfair text-lg font-bold text-white">株式会社アグライズ</h3>
+                  <p className="mt-2 text-sm text-white/70">なりたい自分に、もっと近く。</p>
+                </div>
+              </div>
             </div>
 
-            <div className="text-center sm:text-left">
-              <h4 className="mb-3 font-inter text-sm font-semibold text-gray-900">NAVIGATION</h4>
-              <nav className="flex flex-col items-center space-y-2 text-sm sm:items-start">
-                <Link href="/" className="text-gray-600 hover:text-gray-900">TOP</Link>
-                <Link href="/about" className="text-gray-600 hover:text-gray-900">ABOUT</Link>
-                <Link href="/service" className="text-gray-600 hover:text-gray-900">SERVICE</Link>
-                <Link href="/contact" className="text-gray-600 hover:text-gray-900">CONTACT</Link>
+            <div className="text-center md:text-left">
+              <h4 className="mb-3 font-inter text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Site</h4>
+              <nav className="flex flex-col items-center space-y-2 text-sm md:items-start">
+                <Link href="/" className="text-white/70 transition hover:text-white">TOP</Link>
+                <Link href="/about" className="text-white/70 transition hover:text-white">ABOUT</Link>
+                <Link href="/service" className="text-white/70 transition hover:text-white">SERVICE</Link>
+                <Link href="/contact" className="text-white/70 transition hover:text-white">CONTACT</Link>
               </nav>
             </div>
 
-            <div className="text-center sm:text-left">
-              <h4 className="mb-3 font-inter text-sm font-semibold text-gray-900">CONTACT</h4>
-              <p className="text-sm text-gray-600">メールアドレス: <a className="text-indigo-600 hover:underline" href="mailto:agrise8@gmail.com">agrise8@gmail.com</a></p>
-              {/* <p className="mt-2 text-xs text-gray-500">メール本文に「姓名・返信用メールアドレス・電話番号（任意）・お問合せ内容」をご記載ください。</p> */}
+            <div className="text-center md:text-left">
+              <h4 className="mb-3 font-inter text-sm font-semibold uppercase tracking-[0.2em] text-white/70">Legal</h4>
+              <div className="flex flex-col items-center space-y-2 text-sm md:items-start">
+                <Link href="/privacy" className="text-white/70 transition hover:text-white">Privacy Policy</Link>
+                <Link href="/terms" className="text-white/70 transition hover:text-white">Terms of Use</Link>
+                <a className="text-white/70 transition hover:text-white" href="mailto:agrise8@gmail.com">Contact</a>
+              </div>
             </div>
           </div>
 
-          <div className="mt-8 border-t border-gray-200 pt-6 text-center font-inter text-gray-600">
-            <p>&copy; 2025 株式会社AGRISE. All rights reserved.</p>
+          <div className="mt-10 border-t border-white/10 pt-6 text-center font-inter text-xs text-white/50">
+            <p>&copy; 2025 株式会社アグライズ. All rights reserved.</p>
           </div>
         </div>
       </footer>
