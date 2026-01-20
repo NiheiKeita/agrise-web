@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function TopView() {
   return (
-    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-200 via-pink-200 to-sky-200 px-6 py-20 sm:px-8 md:py-32">
+    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-orange-200 via-pink-200 to-sky-200 px-4 py-16 sm:px-6 sm:py-20 md:py-32">
       {/* Decorative background */}
       <div className="pointer-events-none absolute inset-0">
         <div className="absolute -top-24 -right-20 h-64 w-64 rounded-full bg-orange-200 opacity-40 blur-3xl" />
@@ -12,11 +12,12 @@ export default function TopView() {
       </div>
 
       <div className="mx-auto max-w-3xl text-center">
-        <h1 className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text font-playfair text-5xl font-bold leading-tight text-transparent sm:text-6xl">
-          なりたい自分に、もっと近く。
+        <h1 className="bg-gradient-to-r from-gray-900 via-gray-700 to-gray-900 bg-clip-text font-playfair text-4xl font-bold leading-[1.35] text-transparent sm:text-6xl sm:leading-[1.25]">
+          <span className="block">なりたい自分に、</span>
+          <span className="block">もっと近く。</span>
         </h1>
         <p className="mx-auto mt-16 max-w-2xl text-lg leading-8 text-gray-700">
-          株式会社AGRISEは、キャリア育成と不動産を軸に、関わるすべての人が自分らしい人生を歩める社会を目指しています。
+          株式会社アグライズは、キャリア育成と不動産を軸に、関わるすべての人が自分らしい人生を歩める社会を目指しています。
         </p>
 
         <div className="mt-8 flex items-center justify-center gap-4">
@@ -44,4 +45,3 @@ export default function TopView() {
     </section>
   )
 }
-

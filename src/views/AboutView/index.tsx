@@ -15,7 +15,7 @@ export default function AboutView() {
         <div className="space-y-3 px-2 text-gray-800 text-left">
           <div className="flex items-start justify-center gap-4">
             <span className="sm:w-28 w-18 shrink-0 text-gray-500">社名</span>
-            <span className="w-2/3 break-words sm:w-1/2">株式会社AGRISE（Agrise Co., Ltd.）</span>
+            <span className="w-2/3 break-words sm:w-1/2">株式会社アグライズ</span>
           </div>
           <div className="flex items-start justify-center gap-4">
             <span className="sm:w-28 w-18  shrink-0 text-gray-500">代表者</span>

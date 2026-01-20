@@ -1,8 +1,10 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useEffect, useState } from "react"
+import logo from "~/app/logo.png"
 
 interface SharedHeaderProps {
   scrollY?: number
@@ -38,9 +40,19 @@ export function SharedHeader({ scrollY = 0, scrollDirection = 'up' }: SharedHead
             href={"/"}
             className="font-playfair text-xl font-bold text-gray-900 transition-colors duration-200 hover:text-gray-600"
           >
-            <div className="shrink-0">
-              <h1 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text font-playfair text-2xl font-bold text-transparent sm:text-3xl">株式会社AGRISE</h1>
-              <p className="font-inter text-[10px] tracking-[0.25em] text-gray-600 sm:text-xs">AGRiSE Co., Ltd.</p>
+            <div className="flex items-center gap-3">
+              <Image
+                src={logo}
+                alt="株式会社アグライズ ロゴ"
+                width={44}
+                height={44}
+                priority
+                className="size-10 object-cover sm:size-11"
+              />
+              <div className="shrink-0">
+                <h1 className="bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text font-playfair text-2xl font-bold text-transparent sm:text-3xl">株式会社アグライズ</h1>
+                <p className="font-inter text-[10px] tracking-[0.25em] text-gray-600 sm:text-xs">コーポレートサイト</p>
+              </div>
             </div>
           </Link>
 
